@@ -9,19 +9,19 @@
         <button class="key" @click="addnum(7)">7</button>
         <button class="key" @click="addnum(8)">8</button>
         <button class="key"  @click="addnum(9)">9</button>
-        <button class="key" @click="addoperator('divide')">/</button>
+        <button class="key operator" @click="addoperator('divide')">/</button>
         <button class="key" @click="addnum(4)">4</button>
         <button class="key" @click="addnum(5)">5</button>
         <button class="key" @click="addnum(6)">6</button>
-        <button class="key" @click="addoperator('multiply')">&times;</button>
+        <button class="key operator" @click="addoperator('multiply')">&times;</button>
         <button class="key" @click="addnum(1)">1</button>
         <button class="key" @click="addnum(2)">2</button>
         <button class="key" @click="addnum(3)">3</button>
-        <button class="key" @click="addoperator('sub')">-</button>
-        <button class="key" @click="addnum(0)">0</button>
+        <button class="key operator" @click="addoperator('sub')">-</button>
         <button class="key" @click="reset()">C</button>
+        <button class="key" @click="addnum(0)">0</button>
         <button class="key" @click="calculate()">=</button>
-        <button class="key" @click="addoperator('sum')">+</button>
+        <button class="key operator" @click="addoperator('sum')">+</button>
       </div>
     </div>
   </div>
@@ -100,9 +100,12 @@ export default {
     padding:1rem;
     width:75px;
     height:75px;
-    background: #fff;
+    background: #ddd;
     border:none;
     border:1px solid rgba(0,0,0,0.45);
+}
+.operator{
+    background:yellow;
 }
 input{
     background: #333;
