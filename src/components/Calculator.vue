@@ -101,6 +101,7 @@ export default {
     width:75px;
     height:75px;
     background: #BDBDBD;
+    border:none;
 }
 .operator{
     background:#facf5a;
