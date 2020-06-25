@@ -104,7 +104,8 @@ export default {
     border:none;
 }
 .key:focus{
-    box-shadow: 1px 1px 19px #212121;
+    outline:none;
+    box-shadow: 3px 3px 7px #212121;
 }
 .operator{
     background:#facf5a;
