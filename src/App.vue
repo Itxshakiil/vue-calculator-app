@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Calculator></Calculator>
-    <a href="https://github.com/Itxshakiil/vue-calculator-app">View Code</a>
-    <a class="float-btn" href="mailto:itxshakiil@gmail.com?Subject=An%20issue%20found%20in%20Vue%Calculator%20App">Report an Issue</a>
+    <a href="https://github.com/Itxshakil/vue-calculator-app">View Code</a>
+    <a class="float-btn" href="mailto:itxshakil@gmail.com?Subject=An%20issue%20found%20in%20Vue%Calculator%20App">Report an Issue</a>
   </div>
 </template>
 

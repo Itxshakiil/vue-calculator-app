@@ -85,7 +85,7 @@ export default {
     max-width:300px;
     margin:auto;
     perspective: 1000;
-    box-shadow: 0px 0px 19px rgba(0,0,0,0.45);
+    box-shadow: 1px 1px 19px #212121;
 }
 .screen{
     width:100%;
@@ -100,15 +100,13 @@ export default {
     padding:1rem;
     width:75px;
     height:75px;
-    background: #ddd;
-    border:none;
-    border:1px solid rgba(0,0,0,0.45);
+    background: #BDBDBD;
 }
 .operator{
-    background:yellow;
+    background:#facf5a;
 }
 input{
-    background: #333;
+    background: #233142;
     color:#fff;
     width:100%;
     padding:0.5rem 1rem;
