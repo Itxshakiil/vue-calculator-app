@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="calculator">
+  <div class="calculator">
       <div class="screen">
       <input type="text" align="right" v-model="result">
       <input type="text" align="right" v-model="num2">
@@ -18,12 +17,11 @@
         <button class="key" @click="addnum(2)">2</button>
         <button class="key" @click="addnum(3)">3</button>
         <button class="key operator" @click="addoperator('sub')">-</button>
-        <button class="key" @click="reset()">C</button>
+        <button class="key operator reset" @click="reset()">C</button>
         <button class="key" @click="addnum(0)">0</button>
-        <button class="key" @click="calculate()">=</button>
+        <button class="key operator equal" @click="calculate()">=</button>
         <button class="key operator" @click="addoperator('sum')">+</button>
       </div>
-    </div>
   </div>
 </template>
 
@@ -43,14 +41,14 @@ export default {
           this.num2 = (this.num2 * 10) + num;
           this.lastkeyop=false;
       },
-      addoperator:function(operator){ 
+      addoperator:function(operator){
           if(! this.lastkeyop){
               this.calculate();
             this.lastkeyop=true;
           }
           this.operator = operator;
           // If everything is ok
-         
+
       },
       calculate:function(){
           if(this.operator == "sum"){
@@ -86,6 +84,8 @@ export default {
     margin:auto;
     perspective: 1000;
     box-shadow: 1px 1px 19px #212121;
+    background:white;
+    border-radius:5px;
 }
 .screen{
     width:100%;
@@ -96,19 +96,20 @@ export default {
   grid-template-columns: repeat(4, 1fr);
 }
 .key{
-    font-size:2rem;
-    padding:1rem;
-    width:75px;
-    height:75px;
-    background: #BDBDBD;
+    font-size:1.5rem;
+    margin:0.7rem 0.5rem;
+    width:50px;
+    height:50px;
+    background: white;
     border:none;
 }
 .key:focus{
     outline:none;
-    box-shadow: 3px 3px 7px #212121;
+    box-shadow: 1px 1px 3px #aaa;
 }
 .operator{
     background:#facf5a;
+    border-radius:50%;
 }
 input{
     background: #233142;
@@ -116,10 +117,18 @@ input{
     width:100%;
     padding:0.5rem 1rem;
     border:none;
+    outline:none;
     text-align: right;
     font-size: 1.3rem;
+    border-radius:none;
 }
 input:first-child{
     font-weight:bold;
+}
+.equal,.reset{
+    background:mediumturquoise;
+}
+.reset{
+    font-size:1.4em
 }
 </style>
